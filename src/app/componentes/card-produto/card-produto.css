@@ -57,6 +57,12 @@
   margin: 0 0 1rem;
 }
 
+.produto-desconto {
+  font-size: 0.9rem;
+  color: red;
+  font-weight: bold;
+}
+
 .btn-comprar {
   margin-top: auto;
   background-color: #0d6efd;

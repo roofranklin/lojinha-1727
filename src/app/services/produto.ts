@@ -44,6 +44,14 @@ export class Produto {
             description: "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
             category: "men's clothing",
             image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png",
+        },
+        {
+            id: 5,
+            title: 'Tênis Esportivo Runner Pro',
+            price: 299.9,
+            description: 'Tênis ideal para corridas e treinos de alta performance.',
+            category: 'calcados',
+            image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png',
         }
     ]
 }
