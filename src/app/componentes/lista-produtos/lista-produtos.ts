@@ -26,12 +26,10 @@ export class ListaProdutos implements OnInit {
   }
 
   carregarProdutos(): void {
-    // Simulação de uma API que demora 2 segundos para responder
-    this.carregando.set(true);
-    setTimeout(() => {
-      this.produtos.set(this.productService.produtos);
+    this.productService.obterProdutos().subscribe((dados) => {
+      this.produtos.set(dados);
       this.carregando.set(false);
-    }, 2000);
+    })
   }
 
   receberProduto(produto: any) {
