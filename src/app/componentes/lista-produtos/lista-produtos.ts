@@ -26,9 +26,16 @@ export class ListaProdutos implements OnInit {
   }
 
   carregarProdutos(): void {
-    this.productService.obterProdutos().subscribe((dados) => {
-      this.produtos.set(dados);
-      this.carregando.set(false);
+    this.productService.obterProdutos().subscribe({
+      next: (dados) => {
+        this.produtos.set(dados);
+        this.carregando.set(false);
+      },
+      error: (erro) => {
+        console.error('Ops, deu um erro aqui: ', erro.message);
+        this.carregando.set(false);
+        alert('Ocorreu um erro ao carregar a lista de produtos.');
+      }
     })
   }
 
