@@ -1,9 +1,14 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
+import { provideStore } from '@ngrx/store';
+import { cartReducer } from './store/cart';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideHttpClient()
+    provideHttpClient(),
+    provideStore({
+      cart: cartReducer,
+    })
   ]
 };

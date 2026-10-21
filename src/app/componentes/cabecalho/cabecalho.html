@@ -5,8 +5,8 @@
             <a href="#">Início</a>
             <a href="#">Produtos</a>
             <a href="#">Contato</a>
-            @if (cartService.obterQuantidade() > 0) {
-                <span class="carrinho">Carrinho: {{ cartService.obterQuantidade() }}</span>
+            @if (quantidade() > 0) {
+                <span class="carrinho">Carrinho: {{ quantidade() }}</span>
             }
         </nav>
     </div>

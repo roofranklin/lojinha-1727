@@ -1,5 +1,6 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { Carrinho } from '../../services/carrinho';
+import { Store } from '@ngrx/store';
+import { adicionarProduto } from '../../store/cart';
 import { Produto, ItemProduto } from '../../services/produto';
 import { CardProduto } from '../card-produto/card-produto';
 
@@ -17,7 +18,7 @@ export class ListaProdutos implements OnInit {
 
   constructor(
     private productService: Produto,
-    private cartService: Carrinho
+    private store: Store,
   ) {}
 
 
@@ -41,6 +42,6 @@ export class ListaProdutos implements OnInit {
 
   receberProduto(produto: any) {
     console.log('Produto adicionado:', produto?.title);
-    this.cartService.adicionar(produto);
+    this.store.dispatch(adicionarProduto({ produto }));
   }
 }
