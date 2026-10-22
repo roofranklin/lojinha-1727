@@ -28,3 +28,12 @@ nav span {
     padding: 0.25rem 0.6rem;
     border-radius: 12px;
 }
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: 1px solid #dc3545;
+    padding: 4px 8px;
+    cursor: pointer;
+    margin-left: 10px;
+}

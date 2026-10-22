@@ -7,6 +7,9 @@
             <a href="#">Contato</a>
             @if (quantidade() > 0) {
                 <span class="carrinho">Carrinho: {{ quantidade() }}</span>
+                <button type="button" class="btn-danger" (click)="esvaziarCarrinho()">
+                    Limpar carrinho
+                </button>
             }
         </nav>
     </div>

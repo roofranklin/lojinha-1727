@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { selectQuantItens } from '../../store/cart';
+import { selectQuantItens, limparCarrinho } from '../../store/cart';
 
 @Component({
   imports: [],
@@ -14,4 +14,9 @@ export class Cabecalho {
 
   // LENDO O COFRE
   quantidade = this.store.selectSignal(selectQuantItens);
+
+  // DISPATCH PARA ESVAZIAR O CARRINHO
+  esvaziarCarrinho() {
+    this.store.dispatch(limparCarrinho());
+  }
 }

@@ -12,3 +12,6 @@ export const adicionarProduto = createAction(
     props<{ produto: Produto }>()
 );
 
+export const limparCarrinho = createAction(
+    '[Cabeçalho] Limpar Carrinho'
+);
