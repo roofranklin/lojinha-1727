@@ -30,6 +30,20 @@ export class Checkout {
     endereco: ['', [Validators.required, Validators.minLength(5)]],
     cidade: ['', [Validators.required]],
     pagamento: ['cartao', [Validators.required]],
+    numeroCartao: ['', 
+      [
+        Validators.required,
+        Validators.minLength(16),
+        Validators.maxLength(16) 
+      ],
+    ],
+    codigoSeguranca: ['', 
+      [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(3) 
+      ],
+    ],
   });
 
   // Opcional: Método auxiliar pra facilitar checagem de erros no template
@@ -42,6 +56,7 @@ export class Checkout {
     if (this.checkoutForm.invalid) {
       // Marca todos os campos como tocados para exibir os erros em tela
       this.checkoutForm.markAllAsTouched();
+      return 
     }
 
     // Processa o pedido com sucesso
