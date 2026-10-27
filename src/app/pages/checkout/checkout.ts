@@ -28,6 +28,7 @@ export class Checkout {
     email: ['', [Validators.required, Validators.email]],
     cep: ['', [Validators.required, Validators.pattern(/^\d{5}-?\d{3}$/)]],
     endereco: ['', [Validators.required, Validators.minLength(5)]],
+    cidade: ['', [Validators.required]],
     pagamento: ['cartao', [Validators.required]],
   });
 

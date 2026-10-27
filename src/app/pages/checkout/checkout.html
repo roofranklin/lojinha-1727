@@ -118,11 +118,11 @@
                 <ul class="lista-itens">
                 @for (item of itens(); track $index) {
                     <li class="item-linha">
-                    <!-- <img [src]="item.image" [alt]="item.title" class="item-miniatura" />
-                    <div class="item-info">
-                        <span class="item-titulo">{{ item.title }}</span>
-                        <span class="item-preco">{{ item.price | currency: 'BRL' }}</span>
-                    </div> -->
+                        <img [src]="item.image" [alt]="item.title" class="item-miniatura" />
+                        <div class="item-info">
+                            <span class="item-titulo">{{ item.title }}</span>
+                            <span class="item-preco">{{ item.price | currency: 'BRL' }}</span>
+                        </div>
                     </li>
                 }
                 </ul>

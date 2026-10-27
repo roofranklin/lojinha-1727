@@ -1,5 +1,5 @@
 import { createReducer, on } from "@ngrx/store";
-import { Produto } from '../../services/produto';
+import { ItemProduto } from '../../services/produto';
 import { adicionarProduto, limparCarrinho } from "./cart.actions";
 
 /**
@@ -8,7 +8,7 @@ import { adicionarProduto, limparCarrinho } from "./cart.actions";
  */
 
 export interface CartState {
-    itens: Produto[];
+    itens: ItemProduto[];
 }
 
 /**

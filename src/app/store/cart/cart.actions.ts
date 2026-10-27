@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Produto } from '../../services/produto';
+import { ItemProduto } from '../../services/produto';
 
 /**
  * ACTIONS
@@ -9,7 +9,7 @@ import { Produto } from '../../services/produto';
 
 export const adicionarProduto = createAction(
     '[Carrinho] Adicionar Produto',
-    props<{ produto: Produto }>()
+    props<{ produto: ItemProduto }>()
 );
 
 export const limparCarrinho = createAction(
