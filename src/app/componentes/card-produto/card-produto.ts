@@ -3,9 +3,10 @@ import { CurrencyPipe, UpperCasePipe } from '@angular/common';
 import { ItemProduto } from '../../services/produto';
 import { TruncatePipe } from '../../pipes/truncate-pipe';
 import { DiscountPipe } from '../../pipes/discount-pipe';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [CurrencyPipe, UpperCasePipe, TruncatePipe, DiscountPipe],
+  imports: [CurrencyPipe, UpperCasePipe, TruncatePipe, DiscountPipe, RouterLink],
   selector: 'app-card-produto',
   styleUrl: './card-produto.css',
   templateUrl: './card-produto.html',

@@ -25,4 +25,9 @@ export class Produto {
     obterProdutos(): Observable<ItemProduto[]> {
         return this.http.get<ItemProduto[]>(this.apiUrl);
     }
+
+    obterProdutoPorId(id: number | string): Observable<ItemProduto> {
+        return this.http.get<ItemProduto>(`${this.apiUrl}/${id}`);
+    }
+    
 }
