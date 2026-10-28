@@ -15,3 +15,25 @@
 .cabecalho h1 {
     font-size: 1.5rem;
 }
+
+nav span {
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.carrinho {
+    background-color: gold;
+    color: #212529;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: 1px solid #dc3545;
+    padding: 4px 8px;
+    cursor: pointer;
+    margin-left: 10px;
+}

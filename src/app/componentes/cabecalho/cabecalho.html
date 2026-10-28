@@ -1,5 +1,15 @@
 <header class="cabecalho">
     <div class="container">
         <h1>Minha Loja</h1>
+        <nav>
+            <a routerLink="/">Início</a>
+            <a routerLink="/checkout">Checkout</a>
+            @if (quantidade() > 0) {
+                <span class="carrinho">Carrinho: {{ quantidade() }}</span>
+                <button type="button" class="btn-danger" (click)="esvaziarCarrinho()">
+                    Limpar carrinho
+                </button>
+            }
+        </nav>
     </div>
 </header>
